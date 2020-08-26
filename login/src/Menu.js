@@ -11,18 +11,18 @@ function Main() {
             <section className="container-lg ">
                 <div className="row d-flex flex-nowrap justify-content-between lightgray margin">
                     <ul className=" col-3 d-flex justify-content-between margin ">
-                        <Link className="nones col-4 action lightgray" to="/Buy">
+                        <Link className="linkStyleDelete col-4  lightgray" to="/Buy">
                             <li className="">
                                 Buy
                             </li>
                         </Link>
 
-                        <Link className="nones col-4 action lightgray" to="/Sell">
+                        <Link className="linkStyleDelete col-4  lightgray" to="/Sell">
                             <li className="">
                                 Sell
                             </li>
                         </Link>
-                        <Link className="nones col-4 action lightgray" to="/About">
+                        <Link className="linkStyleDelete col-4  lightgray" to="/About">
                             <li className="">
                                 About
                             </li>
@@ -31,12 +31,12 @@ function Main() {
 
                     <ul className="col-3  d-flex margin ">
 
-                        <Link className="nones action black" to="Register">
+                        <Link className="linkStyleDelete action black" to="Register">
                             <li className="  ">
                                 Register
                             </li>
                         </Link>
-                        <Link className="nones action black darker" to="Login">
+                        <Link className="linkStyleDelete action black darker" to="Login">
                             <li className="  ">
                                 Login
                             </li>

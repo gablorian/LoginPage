@@ -1,6 +1,7 @@
 import React from "react";
 import {Breadcrumbs, Link, Typography} from "@material-ui/core";
 import { withRouter } from "react-router-dom";
+import "./App.scss"
 
 const Crumbs = props => {
     const {
@@ -23,7 +24,7 @@ const Crumbs = props => {
                         return isLast ? (
                             <Typography key={name}>{name}</Typography>
                         ) : (
-                            <Link key={name} onClick={() => history.push(routeTo)}>
+                            <Link key={name}  onClick={() => history.push(routeTo)}>
                                 {name}
                             </Link>
                         );

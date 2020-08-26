@@ -1,0 +1,48 @@
+.loginBox{
+  background: #fafafa;
+  border: 1px solid gray;
+  width: 78vw;
+
+  &__smaller{
+    background: gray;
+    margin: 20px;
+    border: 1px solid black;
+
+  }
+}
+h1{
+  padding: 40px 10px 10px 10px;
+}
+h1:before{
+  width: 100px;
+  height: 5px;
+  background: #00b3ff;
+  content: "";
+  position: absolute;
+  top:180px;
+  z-index: -1;
+}
+h2{
+  font-size: 1rem;
+  padding: 10px
+}
+#registerAddon:after{
+  width: 440px;
+  height: 250px;
+  transform: rotate(90deg) skewX(5deg);
+  content: "";
+  background: #00b3ff;
+  position: absolute;
+  top: 50px;
+  left: -15px;
+  z-index: -1;
+}
+.spacer{
+  margin-top: 15px;
+}
+input{
+  height:2.5rem;
+}
+.correction{
+  margin: 10px;
+}

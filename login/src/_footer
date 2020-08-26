@@ -1,0 +1,10 @@
+footer{
+  content: "";
+  height: 4rem;
+  background: #666666;
+  position: fixed;
+  padding: 10px 10px 0 10px;
+  bottom: 0;
+
+
+}

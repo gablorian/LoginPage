@@ -1,0 +1,48 @@
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+.container-l{
+  background: antiquewhite;
+}
+.red{
+  background: brown;
+  height: 100px;
+}
+.gray{
+  background: gray;
+}
+.lightgray{
+  background: lightgray;
+  list-style: none;
+  Link{
+    text-decoration: none;
+  }
+}
+.black {
+  background: gray;
+  list-style: none;
+  height: 75px;
+}
+.margin {
+  margin: 0 !important;
+  padding: 0 !important;
+}
+
+.darker{
+  background: darkslategray;
+}
+.full{
+  width: 100vw;
+}
+.nones{
+  color: inherit;
+  text-decoration: inherit;
+}
+.action{
+  width: 50%;
+  height: 60px;
+  text-align: center;
+  background: darkslategray;
+}

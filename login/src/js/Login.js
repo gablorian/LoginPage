@@ -1,13 +1,12 @@
 import React from 'react';
-import './App.scss';
-import './_login';
+import '../scss/App.scss';
 import {Link} from "react-router-dom";
 
 const validEmailRegex = RegExp(/^(([^<>()[\].,;:\s@"]+(\.[^<>()\\].,;:\s@"]+)*)|(".+"))@(([^<>()[\].,;:\s@"]+\.)+[^<>()[\].,;:\s@"]{2,})$/i);
 const validateForm = (errors) => {
     let valid = true;
     Object.values(errors).forEach(
-        // if we have an error string set valid to false
+        // jaśli error w state to not valid
         (val) => val.length > 0 && (valid = false)
     );
     return valid;
@@ -27,7 +26,7 @@ class Test extends React.Component {
             }
         }
     }
-//czy valid check
+//czy valid check albo prevent
     handleSubmit = (event) => {
         if(validateForm(this.state.errors)) {
             console.info('Valid Form')
@@ -46,7 +45,7 @@ class Test extends React.Component {
                 errors.login =
                     value.length < 100 && value.length !== 0
                         ? ''
-                        : 'Login musi mieć przynajmniej 1 znak i być krótszy niż 100 znaków!';
+                        : 'Username musi mieć przynajmniej 1 znak i być krótszy niż 100 znaków!';
                 break;
             case 'email':
                 errors.email =
@@ -79,10 +78,10 @@ class Test extends React.Component {
                         <div className="row loginBox d-flex">
 
                             <div className="col-7 loginBox__smaller justify-content-center">
-                                <form onSubmit={this.handleSubmit} className="col-11">
-                                    <div className="row d-flex flex-column">
+                                <form onSubmit={this.handleSubmit} className="col-12">
+                                    <div className="row d-flex flex-column justify-content-center">
                                         <div className="d-flex flex-column spacer">
-                                            <label>Login:</label>
+                                            <label>Username:</label>
                                             <input type="text" name="login" onChange={this.handleChange} required/>
                                         </div>
                                         <div className="d-flex flex-column spacer">
@@ -103,13 +102,17 @@ class Test extends React.Component {
                                 </form>
                             </div>
                             <div className="col-4 correction">
-                                <div id="registerAddon" className="d-flex flex-column justify-content-center align-content-center margin">
-
-                                    <h4>Not a member?</h4>
-
+                                <div id="registerAddon" className="row d-flex flex-column align-content-center  margin">
+                                    <div>
+                                        <h4 id="changeToReg">Not a member?</h4>
+                                    </div>
+                                    <div>
                                         <Link className=" linkStyleDelete" to="/Register">
                                             <button className=" col-12 buttonStyling">Register today</button>
                                         </Link>
+                                    </div>
+
+
 
                                 </div>
                             </div>

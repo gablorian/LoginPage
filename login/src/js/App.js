@@ -1,5 +1,5 @@
 import React from 'react';
-import './App.scss';
+import '../scss/App.scss';
 import Main from "./Menu.js";
 import Test from "./Login.js"
 import About from "./About.js"
@@ -16,7 +16,6 @@ function App() {
       <Main/>
       <SimpleBreadcrumbs/>
         <Switch>
-
             <Route exact path="/Login" render={props => <Test {...props} />} />
             <Route exact path="/Buy" render={props => <Buy {...props} />} />
             <Route exact path="/About" render={props => <About {...props} />} />

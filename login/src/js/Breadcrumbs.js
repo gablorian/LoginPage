@@ -1,7 +1,7 @@
 import React from "react";
-import {Breadcrumbs, Link, Typography} from "@material-ui/core";
+import {Breadcrumbs, Link, Typography} from "@material-ui/core/index";
 import { withRouter } from "react-router-dom";
-import "./App.scss"
+import "../scss/App.scss"
 
 const Crumbs = props => {
     const {
@@ -10,14 +10,16 @@ const Crumbs = props => {
     } = props;
     const pathnames = pathname.split("/").filter(x => x);
     return (
-        <section className="full lightgray">
+        <section className="full menuContainer__smallMenu">
             <div className="container-lg">
                 <Breadcrumbs aria-label="breadcrumb">
+                    {/*link do home*/}
                     {pathnames.length > 0 ? (
                         <Link onClick={() => history.push("/")}>Home</Link>
                     ) : (
                         <Typography> Home </Typography>
                     )}
+                    {/*generowanie ściezki*/}
                     {pathnames.map((name, index) => {
                         const routeTo = `/${pathnames.slice(0, index + 1).join("/")}`;
                         const isLast = index === pathnames.length - 1;
@@ -32,8 +34,6 @@ const Crumbs = props => {
                 </Breadcrumbs>
             </div>
         </section>
-
-
     );
 };
 

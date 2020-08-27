@@ -1,13 +1,11 @@
 .loginBox{
   background: #fafafa;
-  border: 1px solid gray;
+  border-radius: 3px;
   width: 78vw;
-
   &__smaller{
-    background: gray;
+    background: #f0f0f0;
     margin: 20px;
-    border: 1px solid black;
-
+    border-radius: 3px;
   }
 }
 h1{
@@ -16,7 +14,7 @@ h1{
 h1:before{
   width: 100px;
   height: 5px;
-  background: #00b3ff;
+  background: #046db2;
   content: "";
   position: absolute;
   top:180px;
@@ -31,7 +29,7 @@ h2{
   height: 250px;
   transform: rotate(90deg) skewX(5deg);
   content: "";
-  background: #00b3ff;
+  background: #046db2;
   position: absolute;
   top: 50px;
   left: -15px;
@@ -42,7 +40,24 @@ h2{
 }
 input{
   height:2.5rem;
+  border: none;
 }
 .correction{
   margin: 10px;
+}
+.buttonStyling{
+  color: white;
+  background: #5e5e5e;
+  border-radius: 10px;
+  border: none;
+  margin: 10px;
+}
+#registerAddon{
+  padding-top: 100px;
+}
+@media screen and (max-width: 1024px) {
+  #registerAddon:after{
+    display: none;
+  }
+
 }

@@ -1,0 +1,32 @@
+.menuContainer{
+  background: gray;
+  border-bottom: 1px solid gray;
+  &__smallMenu{
+    background: lightgray;
+    &__listPunctor{
+      list-style: none;
+    }
+  }
+}
+.linkStyleDelete{
+  color: black;
+  text-decoration: none;
+  line-height: 4em;
+}
+.registerAndLoginMenu{
+  &--brighter{
+    background: #9e9d9d;
+    width: 50%;
+    list-style: none;
+    height: 4em;
+    text-align: center;
+  }
+  &--darker{
+    background: #5e5e5e;
+    color: white;
+    width: 50%;
+    list-style: none;
+    height: 4em;
+    text-align: center;
+  }
+}
